@@ -1,56 +1,54 @@
 ---
 templateKey: 'product-page'
 path: /products
-title: Our Coffee
+title: Manage your Scientific Content
 image: /img/jumbotron.jpg
 heading: What we offer
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  A customizable CMS that understands science. We support all the usual features 
+  you've come to expect from blogging platforms, like image, video, and file import, 
+  and text (including markdown and a WYSIWYG editor). User authentication and a 
+  Draft > Review > Publish workflow allow for separate authors and editors, to ensure
+  changes are not published without consent. The admin user can configure the fields 
+  that should be populated when new content is created.
 intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        A custom private hosted CMS: your site is designed by Explorable Labs, hosted
+        by Netlify, and developed by you! You decide which users to invite to read, 
+        author, and administer content using our science-literate UI.
     - image: /img/coffee-gear.png
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+        You control your data: All content you upload or create is stored in your
+        own account for the service(s) you choose: github or bitbucket for 
+        smaller datasets and for the website itself. 
+        Cloudinary or Uploadcare for larger files or images. Contact
+        us about connecting to your in-house managed database for larger datasets.
     - image: /img/tutorials.png
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
+        Integrated public science datasets save time for your scientists: just
+        use our custom widgets to include data for a Pubchem or Chembl ID, a 
+        gene symbol, or, (more coming soon!)
     - image: /img/meeting-space.png
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        JAMstack: This is a JAMstack site, with all the performance, scaling, and 
+        security benefits that come with that approach! https://jamstack.org/
   heading: What we offer
   description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+    A customizable CMS that understands science. We support all the usual features
+    you've come to expect from blogging platforms, like image, video, and file import,
+    and text (including markdown and a WYSIWYG editor). User authentication and a
+    Draft > Review > Publish workflow allow for separate authors and editors, to ensure
+    changes are not published without consent. The admin user can configure the fields
+    that should be populated when new content is created.
 main:
-  heading: Great coffee with no compromises
+  heading: Communication + science = :heart: 
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    Your team will work better and faster when everyone is on the same page. 
+    Let us help! Our privacy-first design ensures that you control your data. We just
+    help you integrate your data into a coherent whole, including public data sources 
+    and any other information you want to include to communicate with your team. 
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
@@ -61,14 +59,12 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 testimonials:
-  - author: Elisabeth Kaurismäki
+  - author: Someone
     quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
+      Wow!
+  - author: Someone else
     quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
+      This is great!
 full_image: /img/products-full-width.jpg
 pricing:
   heading: Monthly subscriptions
@@ -77,25 +73,24 @@ pricing:
     monthly subscription plans to receive great coffee at your doorstep each
     month. Contact us about more details and payment info.
   plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+    - description: Demo site for testing our capabilities
       items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+        - Share with your team to get feedback on the UI and editor workflow.
+        - Limited authentification options.
+        - 
+      plan: Free
+      price: '0'
+    - description: Hosted CMS on your domain, e.g. cms.yourcompany.com
       items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
+        - Science-literate CMS for your team.
+        - Up to 100 invite-only users.
+        - User registration and login via external providers (e.g. Google).
+        - Light customization available.
+      plan: Pro
+      price: '?'
+    - description: Custom hosted CMS
       items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
+        - Please contact us and let us know what you need!
       plan: Custom
       price: '??'
 ---
