@@ -43,7 +43,7 @@ intro:
     changes are not published without consent. The admin user can configure the fields
     that should be populated when new content is created.
 main:
-  heading: Communication + science = :heart: 
+  heading: Cooperation + Collaboration = Better Science!
   description: >
     Your team will work better and faster when everyone is on the same page. 
     Let us help! Our privacy-first design ensures that you control your data. We just
