@@ -15,17 +15,7 @@ var ScienceControl = createClass({
   }
 });
 
-var SciencePreview = createClass({
-  render: function() {
-    return h('ul', {},
-      this.props.value.map(function(val, index) {
-        return h('li', {key: index}, val);
-      })
-    );
-  }
-});
-
-CMS.registerWidget("science", ScienceControl, SciencePreview);
+CMS.registerWidget("science", ScienceControl);
 
 export default class IndexPage extends React.Component {
   render() {
