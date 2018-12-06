@@ -2,6 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import CMS from "netlify-cms";
+
+var ScienceControl = createClass({
+  handleChange: function(e) {
+    this.props.onChange(e.target.value.split(',').map((e) => e.trim()));
+  },
+
+  render: function() {
+    var value = this.props.value;
+    return <div><p>{value}</p></div>;
+  }
+});
+
+var SciencePreview = createClass({
+  render: function() {
+    return h('ul', {},
+      this.props.value.map(function(val, index) {
+        return h('li', {key: index}, val);
+      })
+    );
+  }
+});
+
+CMS.registerWidget("science", ScienceControl, SciencePreview);
 
 export default class IndexPage extends React.Component {
   render() {
