@@ -69,9 +69,8 @@ full_image: /img/products-full-width.jpg
 pricing:
   heading: Monthly subscriptions
   description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
+    We make it easy to collaborate and manage your scientific content. 
+    Choose one of our plans, and contact us for more details!
   plans:
     - description: Demo site for testing our capabilities
       items:
@@ -80,15 +79,15 @@ pricing:
         - 
       plan: Free
       price: '0'
-    - description: Hosted CMS on your domain, e.g. cms.yourcompany.com
+    - description: Hosted CMS
       items:
-        - Science-literate CMS for your team.
+        - Science-literate CMS on your domain, e.g. cms.yourcompany.com
         - Up to 100 invite-only users.
         - User registration and login via external providers (e.g. Google).
-        - Light customization available.
+        - Integration assistance.
       plan: Pro
       price: '?'
-    - description: Custom hosted CMS
+    - description: Custom development
       items:
         - Please contact us and let us know what you need!
       plan: Custom
