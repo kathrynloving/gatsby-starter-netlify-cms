@@ -9,34 +9,25 @@ public_folder: /img
 
 collections:
 
-  - name: presentations
-    label: Presentation
-    folder: presentations
+  - name: science
+    label: Science
+    folder: "src/pages/science"
     slug: "{{slug}}"
     create: true
     fields:
       - {label: Title, name: title, widget: string, tagname: ""}
 
-      - label: Theme
-        name: theme
+      - label: Type
+        name: type
         widget: select
         options:
-          - beige
-          - black
-          - blood
-          - league
-          - moon
-          - night
-          - serif
-          - simple
-          - sky
-          - solarized
-          - white
+          - Pubmed data for SMILES
+          - CHEMBL data for SMILES
+          - Uniprot data for a gene
 
       - label: Body
         name: body
-        widget: slides
-        separator: "\n\n<!--s-->\n\n"
+        widget: science
 
   - name: "blog"
     label: "Blog"
@@ -50,7 +41,6 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Science", name: "science", widget: "science"}
 
   - name: "pages"
     label: "Pages"

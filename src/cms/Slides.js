@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import CMS from 'netlify-cms'
+import React, { Component } from "react";
 import styled from "styled-components";
 
 const CommandBar = styled.div`
