@@ -9,25 +9,18 @@ public_folder: /img
 
 collections:
 
-  - name: science
-    label: Science
+  - name: "science"
+    label: "Science"
     folder: "src/pages/science"
-    slug: "{{slug}}"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: Title, name: title, widget: string, tagname: ""}
-
-      - label: Type
-        name: type
-        widget: select
-        options:
-          - Pubmed data for SMILES
-          - CHEMBL data for SMILES
-          - Uniprot data for a gene
-
-      - label: Body
-        name: body
-        widget: science
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "blog"
     label: "Blog"

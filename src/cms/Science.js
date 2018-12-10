@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import CMS from 'netlify-cms'
+import CMS from 'netlify-cms';
+import SmilesDrawer from 'smiles-drawer';
 
 export class ScienceControl extends Component {
   getValue() {
@@ -26,8 +27,12 @@ function append(parent, el) {
 
 function get_result(endpoint) {
   const ul = document.getElementById('science'); 
-  var url = 'https://api.explorablelabs.com/descriptors/smiles/'+ endpoint
-  fetch(url)
+  var url = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/aid/1000/summary/JSON"
+  fetch(url, {
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
     .then(function(response) {
       return response.json();
     })
@@ -36,20 +41,37 @@ function get_result(endpoint) {
     });
 }
 
+function draw_smiles(smiles) {
+  let canvas = document.createElement('canvas');
+  canvas.setAttribute('id', 'canvas1');
+  canvas.setAttribute('width', '100');
+  canvas.setAttribute('height', '100');
+  canvas.setAttribute('alt', smiles);
+  document.body.appendChild(canvas);
+  let options = { width: 300, height: 300, overlapResolutionIterations: 4 };
+  let smilesDrawer = new SmilesDrawer.Drawer(options);
+  SmilesDrawer.parse(smiles, function(tree) {
+    smilesDrawer.draw(tree, 'canvas1', 'light', false);
+  }, function(err) {
+    console.log(err);
+  });
+}
+
 function test_func(endpoint) {
   return endpoint
 }
 
 const MarkdownPreview = CMS.getWidget("markdown").preview;
 export const SciencePreview = props => (
-  <div>
-    <p>{props.value}</p>
-    <hr /><MarkdownPreview {...props} />
-    <h1>Science</h1>
-    <ul id="science"></ul>
-    <p>Input: {props.value}</p>
-    <p>Output:
-      {get_result(props.value)}
-    </p>
+  <div id="drawscience">
+    <div>
+      <p>{props.value}</p>
+      <hr /><MarkdownPreview {...props} />
+      <h1>Science</h1>
+      <ul id="science"></ul>
+      <p>Input: {props.value}</p>
+      <p>Output:</p>
+      {draw_smiles(props.value)}
+    </div>
   </div>
 );
