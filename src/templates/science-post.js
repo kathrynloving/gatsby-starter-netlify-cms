@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { Component } from "react";
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import SmilesDrawer from 'smiles-drawer'
 
 export const SciencePostTemplate = ({
   content,
   contentComponent,
   description,
+  molecule,
   tags,
   title,
   helmet,
@@ -26,6 +28,9 @@ export const SciencePostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <p>Input: {molecule}</p>
+            <canvas width="200" height="200" data-smiles={molecule}></canvas>
+            <img src="https://source.unsplash.com/random/400x200" alt="" />{" "}
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -43,6 +48,7 @@ export const SciencePostTemplate = ({
         </div>
       </div>
     </section>
+    
   )
 }
 
@@ -50,6 +56,7 @@ SciencePostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  molecule: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -63,6 +70,7 @@ const SciencePost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        molecule={post.frontmatter.molecule}
         helmet={
           <Helmet
             titleTemplate="%s | Science"
@@ -84,6 +92,9 @@ SciencePost.propTypes = {
   }),
 }
 
+// Draw molecules, if possible
+SmilesDrawer.apply()
+
 export default SciencePost
 
 export const pageQuery = graphql`
@@ -95,6 +106,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        molecule
         tags
       }
     }

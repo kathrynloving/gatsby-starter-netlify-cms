@@ -6,6 +6,7 @@ const SciencePostPreview = ({ entry, widgetFor }) => (
   <SciencePostTemplate
     content={widgetFor('body')}
     description={entry.getIn(['data', 'description'])}
+    molecule={entry.getIn(['data', 'molecule'])}
     tags={entry.getIn(['data', 'tags'])}
     title={entry.getIn(['data', 'title'])}
   />

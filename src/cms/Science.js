@@ -42,7 +42,7 @@ function get_result(endpoint) {
 }
 
 function draw_smiles(smiles) {
-  let canvas = document.createElement('canvas');
+  let canvas = document.createElement('canvas1');
   canvas.setAttribute('id', 'canvas1');
   canvas.setAttribute('width', '100');
   canvas.setAttribute('height', '100');
@@ -61,17 +61,17 @@ function test_func(endpoint) {
   return endpoint
 }
 
-const MarkdownPreview = CMS.getWidget("markdown").preview;
 export const SciencePreview = props => (
   <div id="drawscience">
     <div>
-      <p>{props.value}</p>
-      <hr /><MarkdownPreview {...props} />
+      <p>{this.props.molecule}</p>
       <h1>Science</h1>
       <ul id="science"></ul>
-      <p>Input: {props.value}</p>
+      <p>Input: {this.props.molecule}</p>
       <p>Output:</p>
-      {draw_smiles(props.value)}
+      {draw_smiles(this.props.molecule)}
     </div>
   </div>
 );
+
+

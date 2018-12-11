@@ -18,6 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               tags
               templateKey
+              molecule
             }
           }
         }
@@ -36,6 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
+        molecule: edge.node.frontmatter.molecule,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),

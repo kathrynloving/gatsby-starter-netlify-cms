@@ -14,4 +14,5 @@ CMS.registerWidget("science", ScienceControl, SciencePreview);
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
-CMS.registerPreviewTemplate('blog', SciencePostPreview)
+CMS.registerPreviewTemplate('science', SciencePostPreview)
+
